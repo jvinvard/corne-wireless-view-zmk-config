@@ -101,6 +101,8 @@
    &kp LCTRL &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4      &trans &trans &trans &trans &trans &trans
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &kp ESC
                     	     &kp LGUI &to 0   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
                 TO_LAYER {
 // -----------------------------------------------------------------------------------------
 // |  TAB |QWERT| NAV | NUM | GAME| BT  |   |     |     |     |     |     | BKSP |
