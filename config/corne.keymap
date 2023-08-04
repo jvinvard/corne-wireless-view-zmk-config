@@ -12,7 +12,11 @@
 #define LOWER 1
 #define RAISE 2
 #define BT_LAYER 3
-#define TO_LAYER 4
+#define NAV_LAYER 4
+#define NUM_LAYER 5
+#define GAME_LAYER 6
+#define QWERTY 7
+#define TO_LAYER 8
 
 /* KEY POSITIONS
   ╭───────────────────────╮          ╭────────────────────────╮
@@ -29,7 +33,7 @@
         combo_layers {
             timeout-ms = <50>;
             key-positions = <36 37>;
-            bindings = <&to 4>;
+            bindings = <&to 8>;
         };
     };
     macros {
@@ -53,7 +57,7 @@
 // | CTRL |  A  |  R  |  S  |  T  |  G  |   |  H  |  N   |  E  |  I  |  O  |  '   |
 // | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        label = "Base";
+                        label = "Colemak";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
    &kp LCTRL &kp A &kp R &kp S &kp T &kp G   &kp H &kp N  &kp E     &kp I   &kp O &kp SQT
@@ -95,12 +99,68 @@
 // | CTRL | BT0 | BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     | ESC  |
 //                    | GUI | BASE| SPC |   | ENT |     | ALT |
-                        label = "BT_Layer";
+                        label = "Bluetooth";
                         bindings = <
    &kp  TAB  &trans &trans &trans &trans &bt BT_CLR   &trans &trans &trans &trans &trans &kp BSPC
    &kp LCTRL &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4      &trans &trans &trans &trans &trans &trans
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &kp ESC
                     	     &kp LGUI &to 0   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+                NAV_LAYER {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "Navigation";
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                        >;
+                };
+                NUM_LAYER {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "Numpad";
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                        >;
+                };
+                GAME_LAYER {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "Game";
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                        >;
+                };
+                QWERTY {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "Qwerty";
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
                 TO_LAYER {
@@ -109,9 +169,9 @@
 // | CTRL |     |     |     |     |     |   |     |     |     |     |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     | ESC  |
 //                    | GUI | BASE| SPC |   | ENT |     | ALT |
-                        label = "To_Layer";
+                        label = "Layers";
                         bindings = <
-   &kp  TAB  &to 3 &to 3 &to 3 &to 3 &to 3   &trans &trans &trans &trans &trans &kp BSPC
+   &kp  TAB  &to 7 &to 4 &to 5 &to 6 &to 3   &trans &trans &trans &trans &trans &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &kp ESC
                     	     &kp LGUI &to 0   &kp SPACE   &kp RET   &trans    &kp RALT
