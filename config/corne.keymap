@@ -22,6 +22,14 @@
 */
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_layers {
+            timeout-ms = <50>;
+            key-positions = <36 37>;
+            bindings = <&ZM_CAD>;
+        };
+    };
     macros {
         ZM_CAD: ZM_CAD {
             label = "ZM_CAD";
