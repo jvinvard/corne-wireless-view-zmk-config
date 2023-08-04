@@ -11,6 +11,7 @@
 #define COLEMAK 0
 #define LOWER 1
 #define RAISE 2
+#define TO_LAYER 3
 
 /* KEY POSITIONS
   ╭───────────────────────╮          ╭────────────────────────╮
@@ -27,7 +28,7 @@
         combo_layers {
             timeout-ms = <50>;
             key-positions = <36 37>;
-            bindings = <&ZM_CAD>;
+            bindings = <&to 3>;
         };
     };
     macros {
@@ -73,7 +74,6 @@
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
-
                 RAISE {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -85,6 +85,20 @@
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+                TO_LAYER {
+// -----------------------------------------------------------------------------------------
+// |  TAB |QWERT| NAV | NUM | GAME| BT  |   |     |     |     |     |     | BKSP |
+// | CTRL |     |     |     |     |     |   |     |     |     |     |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        label = "To_Layer";
+                        bindings = <
+   &kp  TAB  &to 0 &to 0 &to 0 &to 0 &to 0   &trans &trans &trans &trans &trans &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
