@@ -172,7 +172,7 @@
 //                    |     | BASE|     |   |     |     |     |
                         label = "Layers";
                         bindings = <
-   &trans  &tog 7 &to 4 &to 5 &to 6 &to 3   &trans &trans &trans &trans &trans &trans
+   &trans  &tog QWERTY &to 4 &to 5 &to 6 &to 3   &trans &trans &trans &trans &trans &trans
    &trans &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
    &trans &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
                     	     &trans &to 0   &trans   &trans   &trans    &trans
