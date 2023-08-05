@@ -144,7 +144,7 @@
 //                    |  1  |  2  | SPC |   | ENT | DEL  |BASE |
                         label = "Game";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &trantranss &trans  &trans     &trans   &trans    &kp BSPC
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &trans &trans  &trans     &trans   &trans    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &trans &trans  &trans     &trans   &trans &trans
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &trans &trans  &trans &trans &trans &kp ESC
                   &kp N1 &kp N2 &kp SPACE   &kp RET &kp DEL &to 0
