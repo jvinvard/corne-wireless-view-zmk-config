@@ -100,7 +100,7 @@
 // | CTRL | BT0 | BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     | ESC  |
 //                    | GUI | BASE| SPC |   | ENT |     | ALT |
-                        label = "Bluetooth";
+                        label = "BT";
                         bindings = <
    &kp  TAB  &trans &trans &trans &trans &bt BT_CLR   &trans &trans &trans &trans &trans &kp BSPC
    &kp LCTRL &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4      &trans &trans &trans &trans &trans &trans
@@ -172,7 +172,7 @@
 //                    |     | BASE|     |   |     |     |     |
                         label = "Layers";
                         bindings = <
-   &trans  &to 7 &to 4 &to 5 &to 6 &to 3   &trans &trans &trans &trans &trans &trans
+   &trans  &tog 7 &to 4 &to 5 &to 6 &to 3   &trans &trans &trans &trans &trans &trans
    &trans &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
    &trans &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
                     	     &trans &to 0   &trans   &trans   &trans    &trans
