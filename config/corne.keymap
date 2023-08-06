@@ -37,6 +37,14 @@
             bindings = <&to 8>;
         };
     };
+        combos {
+        compatible = "zmk,combos";
+        combo_qwerty {
+            timeout-ms = <50>;
+            key-positions = <40 41>;
+            bindings = <&tog 7>;
+        };
+    };
     macros {
         ZM_CAD: ZM_CAD {
             label = "ZM_CAD";
