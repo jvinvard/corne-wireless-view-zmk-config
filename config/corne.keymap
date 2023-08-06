@@ -10,13 +10,13 @@
 #include "keys_fr_canadian_french.h"
 
 #define COLEMAK 0
-#define LOWER 1
-#define RAISE 2
-#define BT_LAYER 3
-#define NAV_LAYER 4
-#define NUM_LAYER 5
-#define GAME_LAYER 6
-#define QWERTY 7
+#define QWERTY 1
+#define LOWER 2
+#define RAISE 3
+#define BT_LAYER 4
+#define NAV_LAYER 5
+#define NUM_LAYER 6
+#define GAME_LAYER 7
 #define TO_LAYER 8
 
 /* KEY POSITIONS
@@ -42,7 +42,7 @@
         combo_qwerty {
             timeout-ms = <50>;
             key-positions = <40 41>;
-            bindings = <&tog 7>;
+            bindings = <&tog 1>;
         };
     };
     macros {
@@ -71,7 +71,21 @@
    &kp TAB   &kp FR_Q &kp FR_W &kp FR_F &kp FR_P &kp FR_B   &kp FR_J &kp FR_L  &kp FR_U     &kp FR_Y   &kp FR_CARET    &kp BSPC
    &kp LCTRL &kp FR_A &kp FR_R &kp FR_S &kp FR_T &kp FR_G   &kp FR_M &kp FR_N  &kp FR_E     &kp FR_I   &kp FR_O &kp FR_GRAVE
    &kp LSHFT &kp FR_Z &kp FR_X &kp FR_C &kp FR_D &kp FR_V   &kp FR_K &kp FR_H  &kp FR_COMMA &kp FR_DOT &kp FR_E_ACUTE &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                  &kp LGUI &mo 2 &kp SPACE   &kp RET &mo 3 &kp RALT
+                        >;
+                };
+                QWERTY {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "Qwerty";
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL     &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 2 &kp SPACE   &kp RET &mo 3 &kp RALT
                         >;
                 };
                 LOWER {
@@ -158,20 +172,6 @@
                   &kp N1 &kp N2 &kp SPACE   &kp RET &kp DEL &to 0
                         >;
                 };
-                QWERTY {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        label = "Qwerty";
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL     &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
                 TO_LAYER {
 // -----------------------------------------------------------------------------------------
 // |      |QWERT| NAV | NUM | GAME| BT  |   |     |     |     |     |     |      |
@@ -180,7 +180,7 @@
 //                    |     | BASE|     |   |     |     |     |
                         label = "Layers";
                         bindings = <
-   &trans  &to 7 &to 4 &to 5 &to 6 &to 3   &trans &trans &trans &trans &trans &trans
+   &trans  &to 1 &to 5 &to 6 &to 7 &to 4   &trans &trans &trans &trans &trans &trans
    &trans &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
    &trans &trans   &trans &trans   &trans   &trans      &trans &trans &trans &trans &trans &trans
                     	     &trans &to 0   &trans   &trans   &trans    &trans
