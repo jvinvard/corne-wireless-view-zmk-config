@@ -96,7 +96,7 @@
    &kp F1      &kp F2       &kp F3       &kp F4       &kp F5       &kp F6            &kp F7       &kp F8         &kp F9       &kp F10      &kp F11        &kp F12
    &kp FR_PIPE &kp FR_LBRC  &kp FR_RBRC  &kp FR_LPAR  &kp FR_RPAR  &kp FR_BSLH       &kp FR_FSLH  &kp LEFT       &kp DOWN     &kp UP       &kp RIGHT      &kp FR_TILDE
    &kp CAPS    &kp FR_LT    &kp FR_GT    &kp FR_LBKT  &kp FR_RBKT  &kp FR_UNDER      &kp FR_MACR  &kp FR_UMLAUT  &kp FR_ACUTE &kp FR_GRAVE &kp FR_CEDILLA &kp GRAVE
-                          	         &kp LGUI     &trans       &kp SPACE         &kp BKSC     &trans         &ZM_CAD
+                          	         &kp LGUI     &trans       &kp SPACE         &kp BSPC     &trans         &ZM_CAD
                         >;
                 };
                 RAISE {
